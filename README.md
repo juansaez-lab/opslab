@@ -1,61 +1,123 @@
 # OpsLab
 
-A production-like DevOps and SysOps laboratory built from scratch.
+> A hands-on DevOps / SysOps laboratory built from scratch to learn, document and demonstrate real infrastructure skills.
 
 ---
 
-## Project Goal
+## Overview
 
-The objective of this project is to build a complete Linux infrastructure from scratch following industry best practices.
+OpsLab is a personal infrastructure project designed to simulate a real production environment using industry-standard tools.
 
-Instead of only installing services, every component is documented, validated and tested as it would be in a production environment.
+Instead of following isolated tutorials, the project is built incrementally through documented sprints, with every configuration, troubleshooting step and deployment tracked in Git.
+
+The main objective is to gain practical experience in Linux system administration, containerization, automation, monitoring and CI/CD while maintaining professional documentation.
 
 ---
 
-## Planned Architecture
+## Current Architecture
+
+```
+GitHub
+   │
+   ▼
+Jenkins
+   │
+   ▼
+Docker Engine
+ ├── Demo Web Application
+ ├── Nginx Reverse Proxy
+ ├── Prometheus
+ └── Grafana
 
 Ubuntu Server 26.04 LTS
-│
-├── SSH
-├── Git
-├── Docker
-├── Jenkins
-├── Nginx Reverse Proxy
-├── Ansible
-├── Prometheus
-└── Grafana
+```
 
 ---
 
 ## Technologies
 
-- Ubuntu Server
+- Ubuntu Server 26.04 LTS
 - Linux
 - Bash
 - Git
-- SSH
-- Docker
-- Jenkins
-- Nginx
-- Ansible
-- Prometheus
-- Grafana
+- GitHub
+- OpenSSH
+- Docker Engine
+- Docker Compose
+- Jenkins *(planned)*
+- Nginx *(planned)*
+- Prometheus *(planned)*
+- Grafana *(planned)*
+- Ansible *(planned)*
+
+---
+
+## Project Structure
+
+```
+opslab/
+├── README.md
+├── CHANGELOG.md
+├── docs/
+│   ├── 01-ubuntu-server.md
+│   ├── 02-git-ssh-github.md
+│   ├── 03-docker.md
+│   └── ...
+├── scripts/
+├── configs/
+└── images/
+```
+
+---
+
+## Completed Sprints
+
+- ✅ Sprint 1 — Ubuntu Server
+- ✅ Sprint 2 — Git, SSH & GitHub
+- ✅ Sprint 3 — Docker Engine
 
 ---
 
 ## Roadmap
 
-- [x] Sprint 1 - Ubuntu Server installation
-- [x] Sprint 2 - Linux base configuration
-- [ ] Sprint 3 - Docker
-- [ ] Sprint 4 - Jenkins
-- [ ] Sprint 5 - Nginx
-- [ ] Sprint 6 - Ansible
-- [ ] Sprint 7 - Monitoring
-- [ ] Sprint 8 - CI/CD
+- 🔄 Nginx Reverse Proxy
+- 🔄 Jenkins CI/CD
+- 🔄 Demo Web Application
+- 🔄 Docker Compose
+- 🔄 Prometheus Monitoring
+- 🔄 Grafana Dashboards
+- 🔄 Ansible Automation
+- 🔄 Backup & Restore
+- 🔄 Infrastructure Improvements
+
+---
+
+## Documentation
+
+Detailed documentation for every sprint is available in the `docs/` directory.
+
+Current documentation:
+
+- Sprint 1 — Ubuntu Server
+- Sprint 2 — Git, SSH & GitHub
+- Sprint 3 — Docker Engine
+
+---
+
+## Goals
+
+- Learn Linux administration.
+- Master Docker fundamentals.
+- Build CI/CD pipelines.
+- Deploy production-like services.
+- Implement infrastructure monitoring.
+- Practice Infrastructure as Code.
+- Create a professional DevOps portfolio project.
 
 ---
 
 ## Author
 
-Juan Saez
+**Juan Sáez**
+
+GitHub: https://github.com/juansaez-lab
