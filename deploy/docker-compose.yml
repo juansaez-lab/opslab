@@ -1,0 +1,7 @@
+services:
+  demo-nginx:
+    image: nginx:alpine
+    container_name: opslab-demo
+    ports:
+      - "8080:80"
+    restart: unless-stopped
