@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="OpsLab infrastructure status dashboard"
+    >
+    <title>OpsLab Status</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="dashboard">
+        <header class="hero">
+            <div>
+                <p class="eyebrow">DEVOPS / SYSOPS LABORATORY</p>
+                <h1>OpsLab</h1>
+                <p class="subtitle">
+                    Production-like infrastructure built, automated
+                    and documented from scratch.
+                </p>
+            </div>
+
+            <div class="overall-status">
+                <span class="status-dot running"></span>
+                Infrastructure operational
+            </div>
+        </header>
+
+        <section class="summary">
+             <article class="summary-card">
+               <span class="summary-label">Environment</span>
+               <strong>Ubuntu Server 26.04 LTS</strong>
+             </article>
+
+             <article class="summary-card">
+               <span class="summary-label">Hostname</span>
+               <strong>opslab</strong>
+             </article>
+
+             <article class="summary-card">
+               <span class="summary-label">Git branch</span>
+       	       <strong>sprint/demo-web-app</strong>
+   	     </article>
+
+  	     <article class="summary-card">
+      	       <span class="summary-label">Project version</span>
+               <strong>v0.6.0</strong>
+   	     </article>
+        </section>
+
+        <section>
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">SERVICES</p>
+                    <h2>Infrastructure status</h2>
+                </div>
+
+                <p id="last-updated" class="last-updated"></p>
+            </div>
+
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-header">
+                        <span class="service-icon">OS</span>
+                        <span class="badge running-badge">Running</span>
+                    </div>
+                    <h3>Ubuntu Server</h3>
+                    <p>Base operating system for the OpsLab environment.</p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-header">
+                        <span class="service-icon">SSH</span>
+                        <span class="badge running-badge">Running</span>
+                    </div>
+                    <h3>OpenSSH</h3>
+                    <p>Secure remote administration from the Windows host.</p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-header">
+                        <span class="service-icon">DK</span>
+                        <span class="badge running-badge">Running</span>
+                    </div>
+                    <h3>Docker Engine</h3>
+                    <p>Container runtime used to deploy OpsLab services.</p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-header">
+                        <span class="service-icon">NX</span>
+                        <span class="badge running-badge">Running</span>
+                    </div>
+                    <h3>Nginx</h3>
+                    <p>Reverse proxy and HTTP entry point for the platform.</p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-header">
+                        <span class="service-icon">DC</span>
+                        <span class="badge running-badge">Running</span>
+                    </div>
+                    <h3>Docker Compose</h3>
+                    <p>Declarative management of containerized services.</p>
+                </article>
+
+                <article class="service-card planned">
+                    <div class="service-header">
+                        <span class="service-icon">CI</span>
+                        <span class="badge planned-badge">Planned</span>
+                    </div>
+                    <h3>Jenkins</h3>
+                    <p>Automated build and deployment pipelines.</p>
+                </article>
+
+                <article class="service-card planned">
+                    <div class="service-header">
+                        <span class="service-icon">PM</span>
+                        <span class="badge planned-badge">Planned</span>
+                    </div>
+                    <h3>Prometheus</h3>
+                    <p>Metrics collection and infrastructure monitoring.</p>
+                </article>
+
+                <article class="service-card planned">
+                    <div class="service-header">
+                        <span class="service-icon">GF</span>
+                        <span class="badge planned-badge">Planned</span>
+                    </div>
+                    <h3>Grafana</h3>
+                    <p>Dashboards and visualization for operational metrics.</p>
+                </article>
+            </div>
+        </section>
+        <section class="deployment">
+    <div>
+        <p class="eyebrow">DEPLOYMENT</p>
+        <h2>Build information</h2>
+    </div>
+
+    <dl class="deployment-grid">
+        <div>
+            <dt>Deployment method</dt>
+            <dd>Docker Compose</dd>
+        </div>
+
+        <div>
+            <dt>Reverse proxy</dt>
+            <dd>Nginx</dd>
+        </div>
+
+        <div>
+            <dt>Application container</dt>
+            <dd>opslab-demo</dd>
+        </div>
+
+        <div>
+            <dt>Last deployment</dt>
+            <dd id="deployment-time">Loading...</dd>
+        </div>
+    </dl>
+</section>
+        <footer>
+            <p>
+                Built by
+                <a
+                    href="https://github.com/juansaez-lab"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    Juan Sáez
+                </a>
+                · OpsLab
+            </p>
+        </footer>
+    </main>
+</body>
+</html>
