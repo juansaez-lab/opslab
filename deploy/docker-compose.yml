@@ -4,4 +4,6 @@ services:
     container_name: opslab-demo
     ports:
       - "8080:80"
+    volumes:
+      - ../app:/usr/share/nginx/html:ro
     restart: unless-stopped
