@@ -1,6 +1,8 @@
 services:
   demo-nginx:
-    image: nginx:alpine
+    build:
+      context: ../app
+    image: opslab-demo:latest
     container_name: opslab-demo
     ports:
       - "8080:80"
